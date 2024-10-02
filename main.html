@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de imposto</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form id="calculadora">
+    <h3>Calculadora de imposto</h3>
+    <input type="number" required  id="valorVenda" placeholder="Valor da venda" />
+    <input type="text" required id="itens" placeholder="itens vendidos" />
+    <input type="number"  required step="0.01" id="IRPF" placeholder="IRPF"/>
+    <input type="number"  required step="0.01" id="PIS" placeholder="PIS"/>
+    <input type="number"  required step="0.01" id="COFINS" placeholder="COFINS"/>
+    <input type="number"  required step="0.01" id="INSS" placeholder="INSS"/>
+    <input type="number"  required step="0.01" id="ISSQN" placeholder="ISSQN"/>
+    <button type="submit">Calcular</button>
+  </form>
+  
+  <div id="result" style="display: none;">
+    <h1 id="titulo">Nota Fiscal</h1>
+    <div id="resultDiv">
+      Valor da Venda: R$<span id="resultValor"></span><br>
+      Itens: <span id="resultItens"></span><br>
+      <div id="resultImposto">
+        <h4>imposto</h4>
+        <p>
+          IRPF: R$<span id="resultIRPF"></span>
+        </p>
+        <p>
+          PIS: R$<span id="resultPIS"></span>
+        </p>
+        <p>
+          COFINS: R$<span id="resultCOFINS"></span>
+        </p>
+        <p>
+          INSS: R$<span id="resultINSS"></span>
+        </p>
+        <p>
+          ISSQN: R$<span id="resultISSQN"></span>
+        </p>
+      </div>
+      <p id="total">
+        TOTAL : R$<span id="resultTotal"></span>
+      </p>
+    </div>
+    <button id="btn-voltar">Voltar</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
